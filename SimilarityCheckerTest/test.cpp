@@ -36,7 +36,7 @@ TEST_F(SimilarityCheckerFixture, 0PointWhenSecondStringIsBiggerOrSameThanDoubleL
 	EXPECT_EQ(0, point);
 }
 
-TEST_F(SimilarityCheckerFixture, 40PointWhenLength2And3) {
+TEST_F(SimilarityCheckerFixture, 30PointWhenLength2And3) {
 	string input1 = "BB";
 	string input2 = "AAA";
 
@@ -45,7 +45,7 @@ TEST_F(SimilarityCheckerFixture, 40PointWhenLength2And3) {
 	EXPECT_EQ(30, point);
 }
 
-TEST_F(SimilarityCheckerFixture, 40PointWhenLength3And5) {
+TEST_F(SimilarityCheckerFixture, 20PointWhenLength3And5) {
 	string input1 = "BBCCC";
 	string input2 = "AAA";
 
