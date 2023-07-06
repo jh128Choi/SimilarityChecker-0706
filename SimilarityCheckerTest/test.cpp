@@ -3,10 +3,24 @@
 
 using namespace std;
 
-TEST(SimilarityChecker, 40PointWhenSameAlphabet) {
+class SimilarityCheckerFixture : public testing::Test
+{
+public:
 	SimilarityChecker checker;
+};
+
+TEST_F(SimilarityCheckerFixture, 40PointWhenSameAlphabet) {
 	string input1 = "ABC";
 	string input2 = "ABC";
+
+	int point = checker.getAlphabetPoint(input1, input2);
+
+	EXPECT_EQ(40, point);
+}
+
+TEST_F(SimilarityCheckerFixture, 40PointWhenSameAlphabetCount) {
+	string input1 = "ABC";
+	string input2 = "BCA";
 
 	int point = checker.getAlphabetPoint(input1, input2);
 
