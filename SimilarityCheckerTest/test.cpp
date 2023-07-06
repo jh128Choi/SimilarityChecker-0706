@@ -26,3 +26,12 @@ TEST_F(SimilarityCheckerFixture, 40PointWhenSameAlphabetCount) {
 
 	EXPECT_EQ(40, point);
 }
+
+TEST_F(SimilarityCheckerFixture, 0PointWhenUsedAlphabetAreDifferentAll) {
+	string input1 = "ABCD";
+	string input2 = "HJKL";
+
+	int point = checker.getAlphabetPoint(input1, input2);
+
+	EXPECT_EQ(0, point);
+}
