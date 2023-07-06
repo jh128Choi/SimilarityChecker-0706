@@ -8,10 +8,21 @@ class SimilarityChecker
 public:
 	int getAlphabetPoint(const string input1, const string input2)
 	{
-		if (input1 =="ABCD")
+		int sameAlphabetCount = 0;
+		for (char ch : input1)
 		{
-			return 0;
+			for (char ch2 : input2)
+			{
+				if (ch == ch2)
+				{
+					return MAX_POINT;
+				}
+			}
 		}
-		return 40;
+
+		return 0;
 	}
+
+private:
+	static constexpr int MAX_POINT = 40;
 };
