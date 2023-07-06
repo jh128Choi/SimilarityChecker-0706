@@ -9,22 +9,30 @@ public:
 	int getAlphabetPoint(const string input1, const string input2)
 	{
 		int sameAlphabetCount = 0;
-		if (input2 == "BCD")
-		{
-			return 20;
-		}
+		int totalAlphabetCount = 0;
 		for (char ch : input1)
 		{
 			for (char ch2 : input2)
 			{
 				if (ch == ch2)
 				{
-					return MAX_POINT;
+					sameAlphabetCount++;
 				}
 			}
+			totalAlphabetCount++;
 		}
 
-		return 0;
+		if (sameAlphabetCount == 0)
+		{
+			return 0;
+		}
+
+		if (sameAlphabetCount == totalAlphabetCount)
+		{
+			return MAX_POINT;
+		}
+
+		return (double)sameAlphabetCount / totalAlphabetCount * MAX_POINT;
 	}
 
 private:

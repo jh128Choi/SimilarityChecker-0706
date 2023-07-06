@@ -38,8 +38,8 @@ TEST_F(SimilarityCheckerFixture, 0PointWhenUsedAlphabetAreDifferentAll) {
 
 
 TEST_F(SimilarityCheckerFixture, 20PointWhenUsedAlphabetAreSameHalfOnTotal) {
-	string input1 = "ABC";
-	string input2 = "BCD";
+	string input1 = "ABCD";
+	string input2 = "BC";
 
 	int point = checker.getAlphabetPoint(input1, input2);
 
