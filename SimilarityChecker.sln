@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33403.129
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimilarityChecker", "SimilarityChecker\SimilarityChecker.vcxproj", "{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimilarityCheckerTest", "SimilarityCheckerTest\SimilarityCheckerTest.vcxproj", "{F4289AD5-8F04-4762-A353-AF3830BFC9BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B77818C2-1B4D-4E68-A241-3BA9A5B25A1E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Debug|x64.ActiveCfg = Debug|x64
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Debug|x64.Build.0 = Debug|x64
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Debug|x86.ActiveCfg = Debug|Win32
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Debug|x86.Build.0 = Debug|Win32
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Release|x64.ActiveCfg = Release|x64
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Release|x64.Build.0 = Release|x64
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Release|x86.ActiveCfg = Release|Win32
+		{5683CB65-6C17-4EE6-9DF1-E66D3BD59312}.Release|x86.Build.0 = Release|Win32
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Debug|x64.ActiveCfg = Debug|x64
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Debug|x64.Build.0 = Debug|x64
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Debug|x86.ActiveCfg = Debug|Win32
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Debug|x86.Build.0 = Debug|Win32
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Release|x64.ActiveCfg = Release|x64
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Release|x64.Build.0 = Release|x64
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Release|x86.ActiveCfg = Release|Win32
+		{F4289AD5-8F04-4762-A353-AF3830BFC9BE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BFB4A17-57FB-419A-A3B1-F9C3DB6498E3}
+	EndGlobalSection
+EndGlobal
