@@ -11,3 +11,12 @@ TEST(SimilarityCheckerFixture, 60PointWhenSameLength) {
 
 	EXPECT_EQ(60, point);
 }
+
+TEST(SimilarityCheckerFixture, 0PointWhenBiggerOrSameThanDoubleLength) {
+	string input1 = "A";
+	string input2 = "AA";
+	SimilarityChecker checker;
+	int point = checker.getLengthPoint(input1, input2);
+
+	EXPECT_EQ(0, point);
+}
