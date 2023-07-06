@@ -14,6 +14,10 @@ public:
 		{
 			return 0;
 		}
+		if (length1 >= length2 * 2)
+		{
+			return 0;
+		}
 		return 60;
 	}
 };
