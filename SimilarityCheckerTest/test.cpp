@@ -53,3 +53,12 @@ TEST_F(SimilarityCheckerFixture, 20PointWhenLength3And5) {
 
 	EXPECT_EQ(20, point);
 }
+
+TEST_F(SimilarityCheckerFixture, 25PointWhenLength3And4) {
+	string input1 = "BCC";
+	string input2 = "AAAD";
+
+	int point = checker.getLengthPoint(input1, input2);
+
+	EXPECT_EQ(40, point);
+}
