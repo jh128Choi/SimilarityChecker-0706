@@ -29,7 +29,12 @@ public:
 
 		if (length1 == 2 && length2 == 3)
 		{
-			return 40;
+			return 30;
+		}
+
+		if (length1 == 5 && length2 == 3)
+		{
+			return 20;
 		}
 
 		return MAX;
