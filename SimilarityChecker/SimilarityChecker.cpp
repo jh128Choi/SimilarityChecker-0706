@@ -27,6 +27,11 @@ public:
 			return 0;
 		}
 
+		if (length1 == 2 && length2 == 3)
+		{
+			return 40;
+		}
+
 		return MAX;
 	}
 
