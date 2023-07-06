@@ -1,4 +1,5 @@
 
+
 #include <vector>
 #include <xstring>
 
@@ -17,20 +18,37 @@ public:
 
 		if (isAllDifferentUsedAlphabetCount(sameAlphabetCount))
 		{
-			return MIN_POINT;
+			return MIN_ALPHABET_POINT;
 		}
 
 		if (isSameUsedAlphabetCount(sameAlphabetCount, totalAlphabetCount))
 		{
-			return MAX_POINT;
+			return MAX_ALPHABET_POINT;
 		}
 
 		return getPartialPoint(sameAlphabetCount, totalAlphabetCount);
 	}
+  
+  int getLengthPoint(const string input1, const string input2)
+	{
+		int length1 = input1.size();
+		int length2 = input2.size();
+
+		if (isLengthSame(length1, length2)) {
+			return MAX_LENGTH_POINT;
+		}
+
+		if (isLengthDoublUp(length1, length2)) {
+			return 0;
+		}
+
+		return getPartialPoint(length1, length2);
+	}
 
 private:
-	static constexpr int MAX_POINT = 40;
-	static constexpr int MIN_POINT = 0;
+	static constexpr int MAX_ALPHABET_POINT = 40;
+	static constexpr int MIN_ALPHABET_POINT = 0;
+  static constexpr int MAX_LENGTH_POINT = 60;
 
 	vector<char> getUsedAlphabetList(const string input)
 	{
@@ -88,7 +106,33 @@ private:
 
 	double getPartialPoint(int sameAlphabetCount, int totalAlphabetCount)
 	{
-		return (double)sameAlphabetCount / totalAlphabetCount * MAX_POINT;
+		return (double)sameAlphabetCount / totalAlphabetCount * MAX_ALPHABET_POINT;
 	}
 
+	bool isLengthSame(int length1, int length2)
+	{
+		return length1 == length2;
+	}
+
+	bool isLengthDoublUp(int length1, int length2)
+	{
+		if (length1 * 2 <= length2)
+		{
+			return true;
+		}
+		if (length1 >= length2 * 2)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	int getPartialPoint(int length1, int length2)
+	{
+		int gap = length1 < length2 ? length2 - length1 : length1 - length2;
+		int shortLength = length1 > length2 ? length2 : length1;
+		double rate = gap / (double)shortLength;
+
+		return MAX_LENGTH_POINT - (MAX_LENGTH_POINT * rate);
+	}
 };
