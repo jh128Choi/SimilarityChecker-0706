@@ -1,10 +1,12 @@
 
 #include <xstring>
 
+using namespace std;
+
 class SimilarityChecker
 {
 public:
-	int getAlphabetPoint(const std::string& string, const std::string& input2)
+	int getAlphabetPoint(const string input1, const string input2)
 	{
 		return 40;
 	}

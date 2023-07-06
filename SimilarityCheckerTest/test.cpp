@@ -3,7 +3,7 @@
 
 using namespace std;
 
-TEST(TestCaseName, TestName) {
+TEST(SimilarityChecker, 40PointWhenSameAlphabet) {
 	SimilarityChecker checker;
 	string input1 = "ABC";
 	string input2 = "ABC";
