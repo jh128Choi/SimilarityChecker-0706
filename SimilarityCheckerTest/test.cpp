@@ -36,7 +36,6 @@ TEST_F(SimilarityCheckerFixture, 0PointWhenUsedAlphabetAreDifferentAll) {
 	EXPECT_EQ(0, point);
 }
 
-
 TEST_F(SimilarityCheckerFixture, 20PointWhenUsedAlphabetAreSameHalfOnTotal) {
 	string input1 = "ABCD";
 	string input2 = "BC";
@@ -49,6 +48,15 @@ TEST_F(SimilarityCheckerFixture, 20PointWhenUsedAlphabetAreSameHalfOnTotal) {
 TEST_F(SimilarityCheckerFixture, 20PointWhenUsedAlphabetAreSameHalfOnTotalB) {
 	string input1 = "BC";
 	string input2 = "ABCD";
+
+	int point = checker.getAlphabetPoint(input1, input2);
+
+	EXPECT_EQ(20, point);
+}
+
+TEST_F(SimilarityCheckerFixture, 20PointWhenUsedAlphabetAreSamePartialy) {
+	string input1 = "ABCDEF";
+	string input2 = "CDEFGH";
 
 	int point = checker.getAlphabetPoint(input1, input2);
 
